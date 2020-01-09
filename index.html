@@ -68,61 +68,13 @@
 	<div data-role="page" id="pageMap">
 		<div role="main" class="ui-content" id="mapContainer"></div>
 		<div id="searchBox">
-			<h3>Quereinsteigende</h3>
+			<h3>Schulsanierungen 20 und 21</h3>
 			<div class="sample">
 				Zum Beispiel: <a href="#">32. Schule</a>, <a href="#">Ballettschule</a>
 			</div>
 			<div class="searchInput">
 				<input type="text" name="schools" id="autocomplete" placeholder="Geben Sie einen Schulnamen ein" />
 				<div><i class="fa fa-search" aria-hidden="true"></i></div>
-			</div>
-			<div class="priceBar"><div class="priceRed"></div><div class="priceOrange"></div><div class="priceBlue"></div><div class="priceGreen"></div></div>
-			<div class="filter" style="padding: 1em 0 0 0;">
-				<i class="fa fa-filter" aria-hidden="true"></i> Passe die Darstellung an:<br>
-				<div id="filterOpen"><i class="fa fa-chevron-down" aria-hidden="true"></i>anzeigen</div>
-				<div id="filterBox">
-					<select id="selectDistrict" data-native-menu="false" data-inline="false">
-						<option value="">Bezirk</option>
-						<option value="berlin" selected>Berlin</option>
-						<option value="04">Charlottenburg-Wilmersdorf</option>
-						<option value="02">Friedrichshain-Kreuzberg</option>
-						<option value="11">Lichtenberg</option>
-						<option value="10">Marzahn-Hellersdorf</option>
-						<option value="01">Mitte</option>
-						<option value="08">Neukölln</option>
-						<option value="03">Pankow</option>
-						<option value="12">Reinickendorf</option>
-						<option value="05">Spandau</option>
-						<option value="06">Steglitz-Zehlendorf</option>
-						<option value="07">Tempelhof-Schöneberg</option>
-						<option value="09">Treptow-Köpenick</option>
-					</select>
-					<select id="selectSchoolType" data-native-menu="false" data-inline="false">
-						<option value="">Schultyp</option>
-						<option value="all" selected>Alle Schultypen</option>
-						<option value="G">Grundschulen</option>
-						<option value="K">Integrierte Sekundarschulen</option>
-						<option value="Y">Gymnasien</option>
-						<option value="S">Schulen mit Förderschwerpunkt</option>
-						<option value="B">Berufliche Schulen</option>
-						<option value="A">Kolleg und Volkshochschulen</option>
-<!--						<option value="P">Privatschulen</option> -->
-					</select>
-					<select id="selectYear" data-native-menu="false" data-inline="false">
-						<option value="">Schuljahr</option>
-						<option value="2017">2017/18</option>
-						<option value="2018" selected>2018/19</option>
-					</select>
-					<input type="checkbox" checked name="cbHotspot" id="cbHotspot"><label for="cbHotspot">Zeige Brennpunktschulen</label>
-					<input type="checkbox" checked name="cbRelative" id="cbRelative"><label for="cbRelative">Zeige relative Werte</label>
-					<div data-role="rangeslider">
-						<label for="rangeMin">Färbe Schulen in gelb bei Werten von:</label>
-						<input name="rangeMin" id="rangeMin" min="0" max="45" value="1" type="range" />
-						<label for="rangeMax">Färbe Schulen in gelb bei Werten von:</label>
-						<input name="rangeMax" id="rangeMax" min="0" max="45" value="24" type="range" />
-					</div>
-					<div id="filterClose"><i class="fa fa-chevron-up" aria-hidden="true"></i>verkleinern</div>
-				</div>
 			</div>
 			<div class="priceBar"><div class="priceRed"></div><div class="priceOrange"></div><div class="priceBlue"></div><div class="priceGreen"></div></div>
 			<div id="receiptBox" style="padding: 0 0 .5em 0;">
@@ -133,9 +85,7 @@
 					<div class="full" id="recStrasse"></div>
 					<div class="full"><span id="recPLZ"></span> Berlin</div>
 					<div class="empty"></div>
-					<div class="bold">Schuljahr 2017/18</div>
-					<div class="bold">==============</div>
-					<div class="bold">Lehrkräfte: <span id="recAlleLehrkraefte_2017"></span></div>
+					<div class="bold">voraussichtlicher Baubeginn: <span id="recBaubeginn"></span></div>
 					<div class="bold">Quereinsteigende: <span id="recAlleQ_2017"></span></div>
 					<div class="bold">Gesamt: <span id="reccount2017"></span></div>
 					<div class="empty"></div>

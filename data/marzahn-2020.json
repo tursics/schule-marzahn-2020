@@ -1,7 +1,7 @@
 [
   {
     "Schule": "Peter-Pan Grundschule",
-    "voraussichtlicher Baubeginn": "2021ff",
+    "Baubeginn": "2021ff",
     "Maßnahme": "Sanierung und Ergänzungsbau",
     "Summe": "19,2 Mio €",
     "sum1": 19200000,
@@ -17,7 +17,7 @@
   },
   {
     "Schule": "Peter-Pan Grundschule",
-    "voraussichtlicher Baubeginn": "2020/21",
+    "Baubeginn": "2020/21",
     "Maßnahme": "Komplettsanierung der Sporthalle",
     "Summe": "2,7 Mio €",
     "sum1": 2700000,
@@ -33,7 +33,7 @@
   },
   {
     "Schule": "Falken Grundschule",
-    "voraussichtlicher Baubeginn": "2021/22",
+    "Baubeginn": "2021/22",
     "Maßnahme": "Neubau einer Typensporthalle durch Sen SW",
     "Summe": "6,3 Mio €",
     "sum1": 6300000,
@@ -49,7 +49,7 @@
   },
   {
     "Schule": "Grundschule am Bürgerpark",
-    "voraussichtlicher Baubeginn": 2020,
+    "Baubeginn": 2020,
     "Maßnahme": "Sanierung und Neugestaltung des Schulhofs",
     "Summe": "1 Mio €",
     "sum1": 1000000,
@@ -65,7 +65,7 @@
   },
   {
     "Schule": "Victor-Klemperer-Kolleg",
-    "voraussichtlicher Baubeginn": 2021,
+    "Baubeginn": 2021,
     "Maßnahme": "Komplettsanierung der Sporthalle",
     "Summe": "2,7 Mio €",
     "sum1": 2700000,
@@ -81,7 +81,7 @@
   },
   {
     "Schule": "Grundschule an der Mühle",
-    "voraussichtlicher Baubeginn": "2020/21",
+    "Baubeginn": "2020/21",
     "Maßnahme": "Bau von 12 zusätzlichen Klassenräumen mit Containern am Standort der Schule",
     "Summe": "3-4 Mio € (geschätzt)",
     "sum1": 3000000,
@@ -97,7 +97,7 @@
   },
   {
     "Schule": "Tagore-Gymnasium",
-    "voraussichtlicher Baubeginn": 2020,
+    "Baubeginn": 2020,
     "Maßnahme": "Fettabscheider zum Kapazitätsausbau der Mensa",
     "Summe": "0,12 Mio €",
     "sum1": 120000,
@@ -113,7 +113,7 @@
   },
   {
     "Schule": "Grundschule am grünen Stadtrand",
-    "voraussichtlicher Baubeginn": 2020,
+    "Baubeginn": 2020,
     "Maßnahme": "Fettabscheider zum Kapazitätsausbau der Mensa",
     "Summe": "0,13 Mio €",
     "sum1": 130000,
@@ -129,7 +129,7 @@
   },
   {
     "Schule": "Gretel-Bergmann Oberschule",
-    "voraussichtlicher Baubeginn": 2020,
+    "Baubeginn": 2020,
     "Maßnahme": "Fettabscheider zum Kapazitätsausbau der Mensa",
     "Summe": "0,2 Mio €",
     "sum1": 200000,
@@ -145,7 +145,7 @@
   },
   {
     "Schule": "Gretel-Bergmann Oberschule",
-    "voraussichtlicher Baubeginn": 2020,
+    "Baubeginn": 2020,
     "Maßnahme": "Erschließung und Neubau eines Spieplatzes für den Schulhof",
     "Summe": "0,25 Mio €",
     "sum1": 250000,
@@ -161,7 +161,7 @@
   },
   {
     "Schule": "Grundschule an der Mühle",
-    "voraussichtlicher Baubeginn": 2020,
+    "Baubeginn": 2020,
     "Maßnahme": "Fettabscheider zum Kapazitätsausbau der Mensa",
     "Summe": "0,13 Mio €",
     "sum1": 130000,
@@ -177,7 +177,7 @@
   },
   {
     "Schule": "Grundschule am Bürgerpark",
-    "voraussichtlicher Baubeginn": 2020,
+    "Baubeginn": 2020,
     "Maßnahme": "Fettabscheider zum Kapazitätsausbau der Mensa",
     "Summe": "0,1 Mio €",
     "sum1": 100000,
@@ -193,7 +193,7 @@
   },
   {
     "Schule": "Ebereschen-Grundschule",
-    "voraussichtlicher Baubeginn": "",
+    "Baubeginn": "",
     "Maßnahme": "Fettabscheider zum Kapazitätsausbau der Mensa",
     "Summe": "0,2 Mio €",
     "sum1": 200000,
@@ -209,7 +209,7 @@
   },
   {
     "Schule": "Grundschule unter dem Regenbogen",
-    "voraussichtlicher Baubeginn": 2020,
+    "Baubeginn": 2020,
     "Maßnahme": "Komplettsanierung der Sporthalle",
     "Summe": "2,5 Mio €",
     "sum1": 2500000,
@@ -225,7 +225,7 @@
   },
   {
     "Schule": "Grundschule unter dem Regenbogen",
-    "voraussichtlicher Baubeginn": 2020,
+    "Baubeginn": 2020,
     "Maßnahme": "Grundstückserweiterung für zusätzliche Spielfläche",
     "Summe": "0,4 Mio €",
     "sum1": 400000,
@@ -241,7 +241,7 @@
   },
   {
     "Schule": "Paavo-Nurmi Grundschule",
-    "voraussichtlicher Baubeginn": 2021,
+    "Baubeginn": 2021,
     "Maßnahme": "Komplettsanierung der Sporthalle",
     "Summe": "2,7 Mio €",
     "sum1": 2700000,
@@ -257,7 +257,7 @@
   },
   {
     "Schule": "Grundschule an der Wuhle",
-    "voraussichtlicher Baubeginn": "2020/21",
+    "Baubeginn": "2020/21",
     "Maßnahme": "Neubau einer Sporthalle durch das Bauamt",
     "Summe": "4,9 Mio €",
     "sum1": 4900000,
@@ -273,7 +273,7 @@
   },
   {
     "Schule": "Grundschule an der Wuhle",
-    "voraussichtlicher Baubeginn": 2020,
+    "Baubeginn": 2020,
     "Maßnahme": "Sanierung der Mobilen Unterrichtsräume (MUR)",
     "Summe": "1,7 Mio €",
     "sum1": 1700000,
@@ -289,7 +289,7 @@
   },
   {
     "Schule": "Kolibri Grundschule",
-    "voraussichtlicher Baubeginn": 2020,
+    "Baubeginn": 2020,
     "Maßnahme": "Sanierung Sporthalle (Pakettboden)",
     "Summe": "0,25 Mio €",
     "sum1": 250000,
@@ -305,7 +305,7 @@
   },
   {
     "Schule": "Kolibri Grundschule",
-    "voraussichtlicher Baubeginn": 2020,
+    "Baubeginn": 2020,
     "Maßnahme": "Umbau und Ausbau der Mensa",
     "Summe": "1,5 Mio €",
     "sum1": 1500000,
@@ -321,7 +321,7 @@
   },
   {
     "Schule": "Schleipfuhl-Grundschule",
-    "voraussichtlicher Baubeginn": 2020,
+    "Baubeginn": 2020,
     "Maßnahme": "Bau von zusätlichen Klassenräumen durch Container (12 Klassenräume)",
     "Summe": "2,8 Mio €",
     "sum1": 2800000,
@@ -337,7 +337,7 @@
   },
   {
     "Schule": "Schleipfuhl-Grundschule",
-    "voraussichtlicher Baubeginn": "2020/21",
+    "Baubeginn": "2020/21",
     "Maßnahme": "Brandschutzsanierung und neue Mensagestaltung",
     "Summe": "3,5 Mio €",
     "sum1": 3500000,
@@ -353,7 +353,7 @@
   },
   {
     "Schule": "Mozart-Gemeinschaftsschule",
-    "voraussichtlicher Baubeginn": 2021,
+    "Baubeginn": 2021,
     "Maßnahme": "Brandschutzsanierung, Dach, Fenster und WC´s",
     "Summe": "5,9 Mio €",
     "sum1": 5900000,
@@ -369,7 +369,7 @@
   },
   {
     "Schule": "Mozart-Gemeinschaftsschule",
-    "voraussichtlicher Baubeginn": 2020,
+    "Baubeginn": 2020,
     "Maßnahme": "Neue Spielanlage für Schulhof",
     "Summe": "0,1 Mio €",
     "sum1": 100000,
@@ -385,7 +385,7 @@
   },
   {
     "Schule": "Mozart-Gemeinschaftsschule",
-    "voraussichtlicher Baubeginn": 2020,
+    "Baubeginn": 2020,
     "Maßnahme": "Fettabscheider zum Kapazitätsausbau der Mensa",
     "Summe": "0,17 Mio €",
     "sum1": 170000,
@@ -401,7 +401,7 @@
   },
   {
     "Schule": "Mozart-Gemeinschaftsschule",
-    "voraussichtlicher Baubeginn": 2020,
+    "Baubeginn": 2020,
     "Maßnahme": "Komplettsanierung der Sporthalle",
     "Summe": "2,3 Mio €",
     "sum1": 2300000,
@@ -417,7 +417,7 @@
   },
   {
     "Schule": "Casper-david-Friedrich Oberschule",
-    "voraussichtlicher Baubeginn": "2020/21",
+    "Baubeginn": "2020/21",
     "Maßnahme": "Sanierung der Sporthalle (Boden, Dach und Sozialtrakt)",
     "Summe": "0,3 Mio €",
     "sum1": 300000,
@@ -433,7 +433,7 @@
   },
   {
     "Schule": "Bücherwurm-Grundschule",
-    "voraussichtlicher Baubeginn": "2020/21",
+    "Baubeginn": "2020/21",
     "Maßnahme": "Umbau des Hortgebäudes und Schaffung von 10 zusätzlichen Klassenräumen",
     "Summe": "6,2 Mio €",
     "sum1": 6200000,
@@ -449,7 +449,7 @@
   },
   {
     "Schule": "Melanchthon Gymnasium",
-    "voraussichtlicher Baubeginn": "2020/21",
+    "Baubeginn": "2020/21",
     "Maßnahme": "komplettsanierung der 2 Mobilen Unterrichtseinheiten (MUR)",
     "Summe": "3,6 Mio €",
     "sum1": 3600000,
@@ -465,7 +465,7 @@
   },
   {
     "Schule": "Beatrix-Potter Grundschule",
-    "voraussichtlicher Baubeginn": 2020,
+    "Baubeginn": 2020,
     "Maßnahme": "Fettabscheider zum Kapazitätsausbau der Mensa",
     "Summe": "0,3 Mio €",
     "sum1": 300000,
@@ -481,7 +481,7 @@
   },
   {
     "Schule": "Beatrix-Potter Grundschule",
-    "voraussichtlicher Baubeginn": 2020,
+    "Baubeginn": 2020,
     "Maßnahme": "Neue Spielanlage für Schulhof",
     "Summe": "0,1 Mio €",
     "sum1": 100000,
@@ -497,7 +497,7 @@
   },
   {
     "Schule": "Hollerbusch-Grundschule",
-    "voraussichtlicher Baubeginn": "",
+    "Baubeginn": "",
     "Maßnahme": "Sanierung der Fenster in allen Gebäuden",
     "Summe": "0,5 Mio €",
     "sum1": 500000,
@@ -513,7 +513,7 @@
   },
   {
     "Schule": "Schule am Rosenhain",
-    "voraussichtlicher Baubeginn": "2020/21",
+    "Baubeginn": "2020/21",
     "Maßnahme": "Sanierung und Neugestaltung des Schulhofs",
     "Summe": "1,1 Mio €",
     "sum1": 1100000,
@@ -529,7 +529,7 @@
   },
   {
     "Schule": "Ernst-Haeckel-Oberschule",
-    "voraussichtlicher Baubeginn": 2020,
+    "Baubeginn": 2020,
     "Maßnahme": "Komplettsanierung der Sporthalle",
     "Summe": "3,1 Mio €",
     "sum1": 3100000,
@@ -545,7 +545,7 @@
   },
   {
     "Schule": "Otto-Nagel Gymnasium",
-    "voraussichtlicher Baubeginn": 2021,
+    "Baubeginn": 2021,
     "Maßnahme": "Neubau einer Typensporthalle durch Sen SW",
     "Summe": "5,6 Mio €",
     "sum1": 5600000,
@@ -561,7 +561,7 @@
   },
   {
     "Schule": "Otto-Nagel Gymnasium",
-    "voraussichtlicher Baubeginn": 2020,
+    "Baubeginn": 2020,
     "Maßnahme": "Modularer Ergänzungsbau (MEB), 12 zusätzliche Klassenräume",
     "Summe": "4 Mio €",
     "sum1": 4000000,
@@ -577,7 +577,7 @@
   },
   {
     "Schule": "Fuchsberg-Grundschule",
-    "voraussichtlicher Baubeginn": 2020,
+    "Baubeginn": 2020,
     "Maßnahme": "Bau von zusätlichen Klassenräumen durch Container (6 Klassenräume) und modulare Schulräume (6 Klaasenräume)",
     "Summe": "4,2 Mio €",
     "sum1": 4200000,
@@ -593,7 +593,7 @@
   },
   {
     "Schule": "Johann-Strauß-Grundschule",
-    "voraussichtlicher Baubeginn": 2020,
+    "Baubeginn": 2020,
     "Maßnahme": "zusätzlicher Essenscontainer auf Gelände der Polizei",
     "Summe": "0,5 Mio € (Schätzung)",
     "sum1": 500000,
@@ -609,7 +609,7 @@
   },
   {
     "Schule": "Johann-Strauß-Grundschule",
-    "voraussichtlicher Baubeginn": 2020,
+    "Baubeginn": 2020,
     "Maßnahme": "Fettabscheider zum Kapazitätsausbau der Mensa",
     "Summe": "0,2 Mio €",
     "sum1": 200000,
@@ -625,7 +625,7 @@
   },
   {
     "Schule": "F.C. Achard Grundschule",
-    "voraussichtlicher Baubeginn": "2021/22 ff",
+    "Baubeginn": "2021/22 ff",
     "Maßnahme": "Sanierung und Ausbau des Altegebäudes",
     "Summe": "17 Mio €",
     "sum1": 17000000,
@@ -641,7 +641,7 @@
   },
   {
     "Schule": "F.C. Achard Grundschule",
-    "voraussichtlicher Baubeginn": "2020/21",
+    "Baubeginn": "2020/21",
     "Maßnahme": "Neubau einer Typensporthalle durch Sen SW",
     "Summe": "7,5 Mio",
     "sum1": 7500000,
@@ -657,7 +657,7 @@
   },
   {
     "Schule": "F.C. Achard Grundschule",
-    "voraussichtlicher Baubeginn": 2020,
+    "Baubeginn": 2020,
     "Maßnahme": "Modularer Ergänzungsbau (MEB), 12 zusätzliche Klassenräume",
     "Summe": "4 Mio €",
     "sum1": 4000000,
@@ -673,7 +673,7 @@
   },
   {
     "Schule": "F.C. Achard Grundschule",
-    "voraussichtlicher Baubeginn": 2020,
+    "Baubeginn": 2020,
     "Maßnahme": "Fettabscheider zum Kapazitätsausbau der Mensa",
     "Summe": "0,1 Mio €",
     "sum1": 100000,
@@ -689,7 +689,7 @@
   },
   {
     "Schule": "Ulmen Grundschule",
-    "voraussichtlicher Baubeginn": "2020/21",
+    "Baubeginn": "2020/21",
     "Maßnahme": "Umbau und Ausbau der Mensa",
     "Summe": "1,1 Mio €",
     "sum1": 1100000,
@@ -705,7 +705,7 @@
   },
   {
     "Schule": "Ulmen Grundschule",
-    "voraussichtlicher Baubeginn": "2020/21",
+    "Baubeginn": "2020/21",
     "Maßnahme": "Neubau einer Typensporthalle durch Sen SW",
     "Summe": "5,8 Mio €",
     "sum1": 5800000,
@@ -721,7 +721,7 @@
   },
   {
     "Schule": "Friedrich-Schiller Grundschule",
-    "voraussichtlicher Baubeginn": "2020/21",
+    "Baubeginn": "2020/21",
     "Maßnahme": "Sanierung der denkmalgeschützten Sporthalle",
     "Summe": "1,4 Mio €",
     "sum1": 1400000,
@@ -737,7 +737,7 @@
   },
   {
     "Schule": "Elsen-Grundschule",
-    "voraussichtlicher Baubeginn": 2021,
+    "Baubeginn": 2021,
     "Maßnahme": "Bau von Klassenräumen, Mensa, Lehrerzimmern und Aufenthaltsmöglichkeiten für Schulstart bevor Grundschule in 23 oder 24 fertig gebaut ist",
     "Summe": "4-6 Mio € (geschätzt)",
     "sum1": 4000000,
@@ -753,7 +753,7 @@
   },
   {
     "Schule": "Kiekemal-Grundschule",
-    "voraussichtlicher Baubeginn": 2020,
+    "Baubeginn": 2020,
     "Maßnahme": "Bau von zusätzlichen 12 Klassenräumen auf dem Lehnitzplatz",
     "Summe": "4,9 Mio €",
     "sum1": 4900000,
