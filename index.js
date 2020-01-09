@@ -102,19 +102,13 @@ function updateMapHoverItem(coordinates, data, icon, offsetY) {
 	var options = {
 		closeButton: false,
 		offset: L.point(0, offsetY),
-		className: 'printerLabel teacher' + Math.floor(Math.random() * 10)
+		className: 'printerLabel teacher' + Math.floor(Math.random() * 0)
 	},
-		str = '',
-		value = '';
+		str = '';
 
-	icon.options.markerColor = '';
-
-	str += '<div class="top ' + icon.options.markerColor + '">' + data.Schulname + '</div>';
-	str += '<div class="middle">' + value + '</div>';
-	str += '<div class="bottom">Quereinsteigende</div>';
-	if (data.KlassenMehrAls26_32_Schueler === 'X') {
-		str += '<div class="bottom">+ Überbelegt</div>';
-	}
+	str += '<div class="top">' + data.Schulname + '</div>';
+	str += '<div class="middle">' + data.Summe + '</div>';
+	str += '<div class="bottom">Baubeginn ' + data.Baubeginn + '</div>';
 
 	layerPopup = L.popup(options)
 		.setLatLng(coordinates)
@@ -196,7 +190,7 @@ $(document).on("pageshow", "#pageMap", function () {
 		var size = $('#selectEmbedSize').val().split('x'),
 			x = size[0],
 			y = size[1],
-			html = '<iframe src="https://tursics.github.io/schule-quereinsteiger/" width="' + x + '" height="' + y + '" frameborder="0" style="border:0" allowfullscreen></iframe>';
+			html = '<iframe src="https://tursics.github.io/schule-marzahn-2020/" width="' + x + '" height="' + y + '" frameborder="0" style="border:0" allowfullscreen></iframe>';
 
 		$('#inputEmbedURI').val(html);
 		if (-1 === $('#embedMap iframe')[0].outerHTML.indexOf('width="' + x + '"')) {
@@ -215,7 +209,7 @@ $(document).on("pageshow", "#pageMap", function () {
 		onFocusOnce: mapAction
 	});
 
-	var basePath = 'https://raw.githubusercontent.com/tursics/schule-marzahn-2020/master/', // 'https://raw.githubusercontent.com/tursics/schule-marzahn-2020/master/data/',
+	var basePath = '', // 'https://raw.githubusercontent.com/tursics/schule-marzahn-2020/master/data/',
 		dataUrlSanierungen = basePath + 'data/marzahn-2020.json';
 
 	$.getJSON(dataUrlSanierungen, function (dataSanierungen) {
@@ -226,17 +220,15 @@ $(document).on("pageshow", "#pageMap", function () {
 
 		ddj.marker.init({
 			onAdd: function (marker, value) {
-				marker.color = getColor(value);
-				marker.iconPrefix = 'fa';
-				marker.iconFace = 'fa-building-o';
+//				marker.color = getColor(value);
+//				marker.iconPrefix = 'fa';
+//				marker.iconFace = 'fa-building-o';
 
 				return true;
 			},
 			onMouseOver: function (latlng, data) {
 				updateMapHoverItem(latlng, data, {
-					options: {
-						markerColor: getColor(data)
-					}
+					options: {}
 				}, 6);
 			},
 			onMouseOut: function (latlng, data) {
