@@ -21,5 +21,20 @@ include in HTML header
 
 call in your JavaScript file
 ```
-	ddj.map.marker.init(elementName, data);
+	ddj.init(data);
+	ddj.marker.init({
+			uniqueIdentifier: 'stationID',
+			onAdd: function (marker, value) {
+				return true;
+			},
+			onMouseOver: function (latlng, data) {
+				// to somethink
+			},
+			onMouseOut: function (latlng, data) {
+				// to somethink
+			},
+			onClick: function (latlng, data) {
+				// to somethink
+			}
+		});
 ```
