@@ -23,7 +23,6 @@ call in your JavaScript file
 ```
 	ddj.init(data);
 	ddj.marker.init({
-			uniqueIdentifier: 'stationID',
 			onAdd: function (marker, value) {
 				return true;
 			},
