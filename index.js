@@ -164,25 +164,8 @@ $(document).on("pageshow", "#pageMap", function () {
 	var basePath = 'https://raw.githubusercontent.com/tursics/schule-marzahn-2020/master/', // 'https://raw.githubusercontent.com/tursics/schule-marzahn-2020/master/',
 		dataUrlSanierungen = basePath + 'data/marzahn-2020.json';
 
-//	dataUrlSanierungen = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ-b0umnLD64PxS-rbJ3iJIndwJbnDri6pSt72YQSfWVQQHlNdlNy5Hi9a2mIqTXmPOMZLxB3JFXkJt/pubhtml';
-//	dataUrlSanierungen = 'https://spreadsheets.google.com/feeds/list/2PACX-1vQ-b0umnLD64PxS-rbJ3iJIndwJbnDri6pSt72YQSfWVQQHlNdlNy5Hi9a2mIqTXmPOMZLxB3JFXkJt/od6/public/basic?alt=json';
-//	dataUrlSanierungen = 'https://spreadsheets.google.com/feeds/cells/rbJ3iJIndwJbnDri6pSt72YQSfWVQQHlNdlNy5Hi9a2mIqTXmPOMZLxB3JFXkJt/od6/public/basic?alt=json';
-/*	var dataUrlSanierungen2 = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ-b0umnLD64PxS-rbJ3iJIndwJbnDri6pSt72YQSfWVQQHlNdlNy5Hi9a2mIqTXmPOMZLxB3JFXkJt/pub?gid=1577405458&single=true&output=csv';
+	dataUrlSanierungen = 'http://tursics.de/story/schule-marzahn-2020/data/spreadsheets.php?nocache=' + (new Date().getTime());
 
-	$.ajax({
-		url: dataUrlSanierungen2,
-		type: 'GET',
-		xhrFields: {
-			withCredentials: true
-		},
-		success: function (response) {
-			console.log(response);
-		},
-		error: function (xhr, status) {
-			console.error(status);
-		}
-	});*/
-	
 	$.getJSON(dataUrlSanierungen, function (dataSanierungen) {
 		var data = dataSanierungen;
 		data = enrichMissingData(data);

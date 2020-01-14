@@ -2,8 +2,8 @@
 
 Todo
 
-- eine erste Version: https://tursics.github.io/schule-marzahn-2020/
+- eine erste online-Version: https://tursics.github.io/schule-marzahn-2020/
+- Google Docs-Datei unter https://docs.google.com/spreadsheets/d/1DS0ufzHa0ym49VkRn5ihjBDCcUDKAgnbOHkkNoMXEEI/edit#gid=1577405458
 - noch „falsche“ Bilder
 - in den Daten fehlen 2x „Baubeginn“
 - Rechtschreibfehler bei „Maßnahmen“ sind nicht behoben
-- Daten sind noch nicht über Google Docs geladen
