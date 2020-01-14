@@ -40,6 +40,7 @@
 	<script src="lib/tursics.ddj.js"></script>
 	<script src="lib/tursics.ddj.map.js"></script>
 	<script src="lib/tursics.ddj.marker.js"></script>
+	<script src="lib/tursics.ddj.quickinfo.js"></script>
 	<script src="lib/tursics.ddj.search.js"></script>
 	<script src="lib/tursics.ddj.voronoi.js"></script>
 	<script src="index.js"></script>
@@ -77,7 +78,7 @@
 				<div><i class="fa fa-search" aria-hidden="true"></i></div>
 			</div>
 			<div class="priceBar"><div class="priceRed"></div><div class="priceOrange"></div><div class="priceBlue"></div><div class="priceGreen"></div></div>
-			<div id="receiptBox" style="padding: 0 0 .5em 0;">
+			<div id="receiptBox" style="padding: 0 0 .5em 0;" data-quickinfo="box">
 				<div id="receipt" class="normal">
 					<div class="full bold" id="recSchulname"></div>
 					<div class="empty"></div>
@@ -93,7 +94,7 @@
 						</div>
 					</div>
 				</div>
-				<div id="receiptClose"><i class="fa fa-chevron-up" aria-hidden="true"></i>verkleinern</div>
+				<div id="receiptClose" data-quickinfo="close"><i class="fa fa-chevron-up" aria-hidden="true"></i>verkleinern</div>
 			</div>
 		</div>
 		<div data-role="popup" id="popupShare" data-theme="a" class="ui-corner-all">

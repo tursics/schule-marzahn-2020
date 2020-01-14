@@ -13,42 +13,8 @@ function mapAction() {
 
 // -----------------------------------------------------------------------------
 
-function formatNumber(txt) {
-	'use strict';
-
-	txt = String(parseInt(txt, 10));
-	var sign = '',
-		pos = 0;
-	if (txt[0] === '-') {
-		sign = '-';
-		txt = txt.slice(1);
-	}
-
-	pos = txt.length;
-	while (pos > 3) {
-		pos -= 3;
-		txt = txt.slice(0, pos) + '.' + txt.slice(pos);
-	}
-
-	return sign + txt;
-}
-
-// -----------------------------------------------------------------------------
-
 function enrichMissingData(data) {
 	'use strict';
-
-	try {
-		$.each(data, function (key, val) {
-			if (!val.estimated || (val.estimated === '')) {
-				val.estimated = false;
-			} else {
-				val.estimated = true;
-			}
-		});
-	} catch (e) {
-//		console.log(e);
-	}
 
 	return data;
 }
@@ -62,61 +28,12 @@ function getColor() {
 }
 // -----------------------------------------------------------------------------
 
-function updateMapSelectItem(inputData) {
+function updateMapSelectItem(data) {
 	'use strict';
-
-	function setText(key, txt) {
-		var item = $('#rec' + key);
-
-		if (item.parent().hasClass('number')) {
-			txt = formatNumber(txt);
-		} else if (item.parent().hasClass('boolean')) {
-			txt = (txt === 1 ? 'ja' : 'nein');
-		}
-
-		item.text(txt);
-	}
 
 	mapAction();
 
-	var d, data, dataArray = inputData, key, i, infoList, infoItems = [], infoSnippets = [];
-
-	if (!Array.isArray(dataArray)) {
-		dataArray = [inputData];
-	}
-
-	infoList = $('div').find('[data-quickinfo="list"]');
-	if (infoList.length === 1) {
-		infoItems = infoList.find('[data-quickinfo="item"]');
-
-		while (infoItems.length > 1) {
-			$(infoItems[0]).remove();
-			infoItems = infoList.find('[data-quickinfo="item"]');
-		}
-	}
-
-	for (d = 0; d < dataArray.length; ++d) {
-		data = dataArray[d];
-
-		for (key in data) {
-			if (data.hasOwnProperty(key)) {
-				setText(key, data[key]);
-			}
-		}
-
-		if (infoItems.length > 0) {
-			infoSnippets.push($(infoItems[0]).clone());
-		}
-	}
-
-	if (infoItems.length > 0) {
-		$(infoItems[0]).remove();
-		for (i = 0; i < infoSnippets.length; ++i) {
-			infoSnippets[i].appendTo(infoList);
-		}
-	}
-
-	$('#receiptBox').css('display', 'block');
+	ddj.quickinfo.show(data);
 }
 
 // -----------------------------------------------------------------------------
@@ -338,18 +255,14 @@ $(document).on("pageshow", "#pageMap", function () {
 			}
 		});
 
+		ddj.quickinfo.init();
+
 //		initSocialMedia();
 	});
 
 	ddj.getMap().addControl(new ControlInfo());
 
 	$('#autocomplete').val('');
-	$('#receipt .group').on('click', function () {
-		$(this).toggleClass('groupClosed');
-	});
-	$('#receiptClose').on('click', function () {
-		$('#receiptBox').css('display', 'none');
-	});
 	$('#searchBox .sample a:nth-child(1)').on('click', function () {
 		$('#autocomplete').val('32. Schule (Grundschule) (11G32)');
 		selectSuggestion('11G32');
