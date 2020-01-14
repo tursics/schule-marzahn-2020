@@ -2,6 +2,13 @@
 
 version 0.1
 
+## todo
+
+voronoi is broken
+
+please fix ddj.getData() for 'unique identifier'
+
+
 ## description
 
 to be done

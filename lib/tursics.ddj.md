@@ -22,7 +22,9 @@ call in your JavaScript file
 	ddj.init(data);   // init DDJ lib and set user data
 
 	ddj.getData();    // return the data given as parameter in init() function
-	ddj.getData(key); // return the value of user data[key]. If key is null, complete data will return
+	ddj.getData(key); // return the value of user data[key].
+	                  // If key is null, complete data will return
+					  // If an unique identifier is set, this function return an array of data
 
 	ddj.setUniqueIdentifier('stationID'); // set key to identify equal values, like 1:n data
 	ddj.getUniqueIdentifier();            // get the unique key or null
