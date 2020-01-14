@@ -38,19 +38,27 @@ function updateMapSelectItem(data) {
 
 // -----------------------------------------------------------------------------
 
-function updateMapHoverItem(coordinates, data, icon, offsetY) {
+function updateMapHoverItem(coordinates, obj, icon, offsetY) {
 	'use strict';
 
 	var options = {
 		closeButton: false,
 		offset: L.point(0, offsetY),
-		className: 'printerLabel teacher' + Math.floor(Math.random() * 0)
+		className: 'printerLabel teacher0'
 	},
-		str = '';
+		str = '',
+		data,
+		dataArray = obj;
+
+	if (!Array.isArray(dataArray)) {
+		dataArray = [obj];
+	}
+
+	data = dataArray[0];
 
 	str += '<div class="top">' + data.Schulname + '</div>';
-	str += '<div class="middle">' + data.Summe + '</div>';
-	str += '<div class="bottom">Baubeginn ' + data.Baubeginn + '</div>';
+	str += '<div class="middle">' + dataArray.length + '</div>';
+	str += '<div class="bottom">' + (dataArray.length === 1 ? 'Baumaßnahme' : 'Baumaßnahmen') + '</div>';
 
 	layerPopup = L.popup(options)
 		.setLatLng(coordinates)
@@ -187,10 +195,6 @@ $(document).on("pageshow", "#pageMap", function () {
 //				marker.color = getColor(value);
 //				marker.iconPrefix = 'fa';
 //				marker.iconFace = 'fa-building-o';
-
-				if (marker.count > 1) {
-					marker.iconFace = 'fa-building-o';
-				}
 
 				return true;
 			},
