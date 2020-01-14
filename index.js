@@ -62,7 +62,7 @@ function getColor() {
 }
 // -----------------------------------------------------------------------------
 
-function updateMapSelectItem(data) {
+function updateMapSelectItem(inputData) {
 	'use strict';
 
 	function setText(key, txt) {
@@ -79,17 +79,42 @@ function updateMapSelectItem(data) {
 
 	mapAction();
 
-	var key;
+	var d, data, dataArray = inputData, key, i, infoList, infoItems = [], infoSnippets = [];
 
-	for (key in data) {
-		if (data.hasOwnProperty(key)) {
-			setText(key, data[key]);
+	if (!Array.isArray(dataArray)) {
+		dataArray = [inputData];
+	}
+
+	infoList = $('div').find('[data-quickinfo="list"]');
+	if (infoList.length === 1) {
+		infoItems = infoList.find('[data-quickinfo="item"]');
+
+		while (infoItems.length > 1) {
+			$(infoItems[0]).remove();
+			infoItems = infoList.find('[data-quickinfo="item"]');
 		}
 	}
 
-	setText('count2017', data.count_2017 || 0);
-	setText('count2018', data.count_2018 || 0);
-	setText('hotspot', 'x' === data['Brennpunktschule-2018'] ? 'ja' : 'nein');
+	for (d = 0; d < dataArray.length; ++d) {
+		data = dataArray[d];
+
+		for (key in data) {
+			if (data.hasOwnProperty(key)) {
+				setText(key, data[key]);
+			}
+		}
+
+		if (infoItems.length > 0) {
+			infoSnippets.push($(infoItems[0]).clone());
+		}
+	}
+
+	if (infoItems.length > 0) {
+		$(infoItems[0]).remove();
+		for (i = 0; i < infoSnippets.length; ++i) {
+			infoSnippets[i].appendTo(infoList);
+		}
+	}
 
 	$('#receiptBox').css('display', 'block');
 }
@@ -132,10 +157,12 @@ function updateMapVoidItem() {
 function selectSuggestion(selection) {
 	'use strict';
 
+	var done = false;
 	$.each(ddj.getData(), function (key, val) {
-		if (val && (val.BSN === selection)) {
+		if (!done && val && (val.BSN === selection)) {
+			done = true;
 			ddj.getMap().panTo(new L.LatLng(val.lat, val.lng));
-			updateMapSelectItem(val);
+			updateMapSelectItem(ddj.getAllObjects(val));
 		}
 	});
 }
@@ -209,20 +236,44 @@ $(document).on("pageshow", "#pageMap", function () {
 		onFocusOnce: mapAction
 	});
 
-	var basePath = '', // 'https://raw.githubusercontent.com/tursics/schule-marzahn-2020/master/data/',
+	var basePath = 'https://raw.githubusercontent.com/tursics/schule-marzahn-2020/master/', // 'https://raw.githubusercontent.com/tursics/schule-marzahn-2020/master/',
 		dataUrlSanierungen = basePath + 'data/marzahn-2020.json';
 
+//	dataUrlSanierungen = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ-b0umnLD64PxS-rbJ3iJIndwJbnDri6pSt72YQSfWVQQHlNdlNy5Hi9a2mIqTXmPOMZLxB3JFXkJt/pubhtml';
+//	dataUrlSanierungen = 'https://spreadsheets.google.com/feeds/list/2PACX-1vQ-b0umnLD64PxS-rbJ3iJIndwJbnDri6pSt72YQSfWVQQHlNdlNy5Hi9a2mIqTXmPOMZLxB3JFXkJt/od6/public/basic?alt=json';
+//	dataUrlSanierungen = 'https://spreadsheets.google.com/feeds/cells/rbJ3iJIndwJbnDri6pSt72YQSfWVQQHlNdlNy5Hi9a2mIqTXmPOMZLxB3JFXkJt/od6/public/basic?alt=json';
+/*	var dataUrlSanierungen2 = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ-b0umnLD64PxS-rbJ3iJIndwJbnDri6pSt72YQSfWVQQHlNdlNy5Hi9a2mIqTXmPOMZLxB3JFXkJt/pub?gid=1577405458&single=true&output=csv';
+
+	$.ajax({
+		url: dataUrlSanierungen2,
+		type: 'GET',
+		xhrFields: {
+			withCredentials: true
+		},
+		success: function (response) {
+			console.log(response);
+		},
+		error: function (xhr, status) {
+			console.error(status);
+		}
+	});*/
+	
 	$.getJSON(dataUrlSanierungen, function (dataSanierungen) {
 		var data = dataSanierungen;
 		data = enrichMissingData(data);
 
 		ddj.init(data);
+		ddj.setUniqueIdentifier('BSN');
 
 		ddj.marker.init({
 			onAdd: function (marker, value) {
 //				marker.color = getColor(value);
 //				marker.iconPrefix = 'fa';
 //				marker.iconFace = 'fa-building-o';
+
+				if (marker.count > 1) {
+					marker.iconFace = 'fa-building-o';
+				}
 
 				return true;
 			},
@@ -279,7 +330,11 @@ $(document).on("pageshow", "#pageMap", function () {
 				return str;
 			},
 			onClick: function (data) {
-				selectSuggestion(data.BSN);
+				if (Array.isArray(data)) {
+					selectSuggestion(data[0].BSN);
+				} else {
+					selectSuggestion(data.BSN);
+				}
 			}
 		});
 
