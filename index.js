@@ -21,13 +21,6 @@ function enrichMissingData(data) {
 
 // -----------------------------------------------------------------------------
 
-function getColor() {
-	'use strict';
-
-	return 'blue';
-}
-// -----------------------------------------------------------------------------
-
 function updateMapSelectItem(data) {
 	'use strict';
 
@@ -155,6 +148,7 @@ $(document).on("pageshow", "#pageMap", function () {
 	ddj.map.init('mapContainer', {
 		mapboxId: 'tursics.l7ad5ee8',
 		mapboxToken: 'pk.eyJ1IjoidHVyc2ljcyIsImEiOiI1UWlEY3RNIn0.U9sg8F_23xWXLn4QdfZeqg',
+//		attribution: 'icons made by <a href="https://www.flaticon.com/authors/eucalyp" title="Eucalyp">Eucalyp</a> from <a href="https://www.flaticon.com/" title="Flaticon">flaticon.com</a>',
 		centerLat: 52.536686,
 		centerLng: 13.604863,
 		zoom: 14,
@@ -175,7 +169,7 @@ $(document).on("pageshow", "#pageMap", function () {
 
 		ddj.marker.init({
 			onAdd: function (marker, value) {
-//				marker.color = getColor(value);
+				marker.color = 'darkred';
 //				marker.iconPrefix = 'fa';
 //				marker.iconFace = 'fa-building-o';
 
@@ -195,11 +189,12 @@ $(document).on("pageshow", "#pageMap", function () {
 		});
 
 		ddj.search.init({
+			orientation: 'auto',
 			showNoSuggestion: true,
 			titleNoSuggestion: '<i class="fa fa-info-circle" aria-hidden="true"></i> Geben sie bitte den Namen einer Schule ein',
 			onAdd: function (obj, value) {
 				var name = value.Schulname,
-					color = getColor(value);
+					color = 'darkred';
 
 				if ('' !== value.BSN) {
 					name += ' (' + value.BSN + ')';
@@ -225,7 +220,7 @@ $(document).on("pageshow", "#pageMap", function () {
 			},
 			onFormat: function (suggestion, currentValue) {
 				var color = suggestion.color,
-					icon = 'fa-building-o',
+					icon = 'fa-dot-circle-o',
 					str = '';
 
 				str += '<div class="autocomplete-icon back' + color + '"><i class="fa ' + icon + '" aria-hidden="true"></i></div>';
@@ -250,14 +245,6 @@ $(document).on("pageshow", "#pageMap", function () {
 	ddj.getMap().addControl(new ControlInfo());
 
 	$('#autocomplete').val('');
-	$('#searchBox .sample a:nth-child(1)').on('click', function () {
-		$('#autocomplete').val('32. Schule (Grundschule) (11G32)');
-		selectSuggestion('11G32');
-	});
-	$('#searchBox .sample a:nth-child(2)').on('click', function () {
-		$('#autocomplete').val('Staatliche Ballettschule Berlin und Schule für Artistik (03B08)');
-		selectSuggestion('03B08');
-	});
 
 	$("#popupShare").on('popupafteropen', function () {
 		$('#shareLink input').focus().select();
