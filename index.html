@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="de" xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -91,25 +91,25 @@
 					<div><i class="fa fa-search" aria-hidden="true"></i></div>
 				</div>
 			</div>
-		</div>
-		<div id="searchBox">
-			<div id="receiptBox" style="padding: 0 0 .5em 0;" data-quickinfo="box">
-				<div id="receipt" class="normal">
-					<div class="full bold" id="recSchulname"></div>
-					<div class="empty"></div>
-					<div class="full"><span id="recSchulart"></span> (<span id="recBSN"></span>)</div>
-					<div class="full" id="recStrasse"></div>
-					<div class="full"><span id="recPLZ"></span> Berlin</div>
+			<div class="sign normal" id="receipt" data-quickinfo="box">
+				<h3>
+					<span class="logo"><img src="assets/arms-marzahn-hellersdorf.svg"></span>
+					<span data-quickdata="Schulart"></span>
+				</h3>
+				<div class="signLine"><span data-quickdata="Schulname"></span> (<span data-quickdata="BSN"></span>)</div>
+				<div>
+					<div data-quickdata="Strasse"></div>
+					<div><span data-quickdata="PLZ"></span> Berlin</div>
 					<div data-quickinfo="list">
 						<div data-quickinfo="item">
 							<div class="empty"></div>
-							<div class="full bold" id="recMaßnahme"></div>
-							<div class="full">Voraussichtlicher Baubeginn: <span id="recBaubeginn"></span></div>
-							<div class="full">Summe: <span id="recSumme"></span></div>
+							<div class="bold" data-quickdata="Maßnahme"></div>
+							<div>Geplanter Baubeginn: <span data-quickdata="Baubeginn"></span></div>
+							<div>Kosten: <span data-quickdata="Summe"></span></div>
 						</div>
 					</div>
 				</div>
-				<div id="receiptClose" data-quickinfo="close"><i class="fa fa-chevron-up" aria-hidden="true"></i>verkleinern</div>
+				<div id="receiptClose" data-quickinfo="close"><i class="fa fa-chevron-left" aria-hidden="true"></i>schließen</div>
 			</div>
 		</div>
 		<div data-role="popup" id="popupShare" data-theme="a" class="ui-corner-all">

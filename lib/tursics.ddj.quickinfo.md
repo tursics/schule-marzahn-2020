@@ -19,6 +19,8 @@ call in your JavaScript file
 	ddj.quickinfo.init();
 
 	ddj.quickinfo.show(obj); // show quick info for the given object
+
+	ddj.quickinfo.setVisible(show); // show or hide (true | false) quickinfo window
 ```
 
 sample HTML file

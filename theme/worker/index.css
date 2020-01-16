@@ -37,19 +37,19 @@
 		url('fonts/noto-serif-v4-latin-regular.svg#NotoSerif') format('svg'); /* Legacy iOS */
 }
 
-.normal {
+/*.normal {
 	font-size: 13px;
 	font-family: 'Montserrat', sans-serif;
 	font-style: normal;
 	font-weight: 400;
 	color: #999;
-}
+}*/
 .bold {
-	font-size: 13px;
+/*	font-size: 13px;
 	font-family: 'Montserrat', sans-serif;
 	font-style: normal;
-	font-weight: 400;
-	color: #333;
+	font-weight: 400;*/
+	color: #a23336;
 }
 .center {
 	text-align: center;
@@ -85,15 +85,12 @@
 #filterBox {
 	display:none;
 }
-#receiptBox {
-	display:none;
-	width: 18em;
-}
 #receipt {
-	color: #999;
+	display:none;
+/*	color: #999;
 	margin: 0;
 	padding: 1em 0em !important;
-	line-height: 1.2em;
+	line-height: 1.2em;*/
 }
 #receipt .full {
 	white-space: nowrap;
@@ -176,12 +173,7 @@
 	vertical-align: middle;
 }
 #receiptClose, #filterOpen, #filterClose {
-	color: #555;
-	border-bottom: 1px solid #999;
-	margin: .5em 0 0 0;
-	font-family: 'Montserrat', sans-serif;
-	font-size: 13px;
-	display: inline-block;
+	border-top: 1px solid #555;
 	-webkit-transition: background-color 200ms linear;
 	-moz-transition: background-color 200ms linear;
 	-ms-transition: background-color 200ms linear;
@@ -189,7 +181,8 @@
 	transition: background-color 200ms linear;
 }
 #receiptClose:hover, #filterOpen:hover, #filterClose:hover {
-	background: #ffff99;
+	background: #a23336;
+	color: #fff;
 }
 #receiptClose i, #filterOpen i, #filterClose i {
 	padding: 0 .5em 0 0;
@@ -326,6 +319,7 @@
 	bottom: 20px;
 	font-family: 'Montserrat', sans-serif;
 	font-style: normal;
+	hyphens: auto;
 	max-height: 100vh;
 	max-width: 15em;
 	overflow-x: hidden;
@@ -354,12 +348,13 @@
 	background: #fff;
 	border: #555 solid 1px;
 	box-shadow: #555 0 0 1px;
-	margin: .7em .2em 0 0;
+	margin: 1.2em .2em 0 0;
 	min-height: 4em;
 	transform: rotateY(-13deg);
 }
 
 .bigSign .sign > h3 {
+	height: 2.5em;
 	margin: 0;
 	padding: .5em;
 }

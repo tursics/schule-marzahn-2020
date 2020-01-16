@@ -168,21 +168,21 @@ $(document).on("pageshow", "#pageMap", function () {
 		ddj.setUniqueIdentifier('BSN');
 
 		ddj.marker.init({
-			onAdd: function (marker, value) {
+			onAdd: function (marker) {
 				marker.color = 'darkred';
 //				marker.iconPrefix = 'fa';
 //				marker.iconFace = 'fa-building-o';
 
 				return true;
 			},
-			onMouseOver: function (latlng, data) {
+/*			onMouseOver: function (latlng, data) {
 				updateMapHoverItem(latlng, data, {
 					options: {}
 				}, 6);
 			},
 			onMouseOut: function (latlng, data) {
 				updateMapVoidItem(data);
-			},
+			},*/
 			onClick: function (latlng, data) {
 				updateMapSelectItem(data);
 			}
@@ -237,7 +237,15 @@ $(document).on("pageshow", "#pageMap", function () {
 			}
 		});
 
-		ddj.quickinfo.init();
+		ddj.quickinfo.init({
+			onShow: function () {
+				$('#infoSign').hide();
+			},
+			onHide: function () {
+				$('#autocomplete').val('');
+				$('#infoSign').show();
+			}
+		});
 
 //		initSocialMedia();
 	});
