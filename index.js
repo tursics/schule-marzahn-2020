@@ -89,7 +89,7 @@ $(document).on("pageshow", "#pageMap", function () {
 		onFocusOnce: mapAction
 	});
 
-	var dataUrlSanierungen = 'http://tursics.de/story/schule-marzahn-2020/data/spreadsheets.php?nocache=' + (new Date().getTime());
+	var dataUrlSanierungen = 'https://tursics.com/script/schule-marzahn-2020/spreadsheets.php?nocache=' + (new Date().getTime());
 
 	$.getJSON(dataUrlSanierungen, function (dataSanierungen) {
 		var data = dataSanierungen;
