@@ -69,7 +69,7 @@
 	<div data-role="page" id="pageMap">
 		<div role="main" class="ui-content" id="mapContainer"></div>
 		<div class="bigSign">
-			<div class="sign" id="infoSign">
+			<div class="sign visibleWithoutErrors" id="infoSign">
 				<h3>
 					<span class="logo"><img src="assets/arms-marzahn-hellersdorf.svg"></span>
 					Schulsanierung 2020 und 2021
@@ -83,12 +83,15 @@
 				<div>
 					Stöbern sie auf der Karte und klicken sie auf einzelne Schulen für weitere Informationen.
 				</div>
-				<div style="padding-bottom: 0;">
+				<div class="visibleWithData" style="padding-bottom: 0;">
 					Oder suchen sie nach einer Schule:
 				</div>
-				<div class="searchInput">
+				<div class="searchInput visibleWithData">
 					<input type="text" name="schools" id="autocomplete" placeholder="hier suchen" />
 					<div><i class="fa fa-search" aria-hidden="true"></i></div>
+				</div>
+				<div class="visibleWithoutData center">
+					<i class="fa fa-refresh fa-spin fa-3x fa-fw"></i>
 				</div>
 			</div>
 			<div class="sign normal" id="receipt" data-quickinfo="box">
@@ -110,6 +113,17 @@
 					</div>
 				</div>
 				<div id="receiptClose" data-quickinfo="close"><i class="fa fa-chevron-left" aria-hidden="true"></i>schließen</div>
+			</div>
+			<div class="sign visibleWithErrors" id="errorPAge">
+				<h3>
+					Es ist ein Fehler aufgetreten
+				</h3>
+				<div class="signLine">
+					Entschuldigung, das hätte nicht passieren sollen
+				</div>
+				<div>
+					Bitte lade diese Seite noch einmal neu oder schicke mir eine <a href="mailto:thomas@tursics.de">Nachricht per E-Mail</a>.
+				</div>
 			</div>
 		</div>
 		<div data-role="popup" id="popupShare" data-theme="a" class="ui-corner-all">

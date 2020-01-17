@@ -3,20 +3,10 @@
 /*jslint browser: true*/
 /*global $,L,window,document,ddj*/
 
-var layerPopup = null;
-
 // -----------------------------------------------------------------------------
 
 function mapAction() {
 	'use strict';
-}
-
-// -----------------------------------------------------------------------------
-
-function enrichMissingData(data) {
-	'use strict';
-
-	return data;
 }
 
 // -----------------------------------------------------------------------------
@@ -27,47 +17,6 @@ function updateMapSelectItem(data) {
 	mapAction();
 
 	ddj.quickinfo.show(data);
-}
-
-// -----------------------------------------------------------------------------
-
-function updateMapHoverItem(coordinates, obj, icon, offsetY) {
-	'use strict';
-
-	var options = {
-		closeButton: false,
-		offset: L.point(0, offsetY),
-		className: 'printerLabel teacher0'
-	},
-		str = '',
-		data,
-		dataArray = obj;
-
-	if (!Array.isArray(dataArray)) {
-		dataArray = [obj];
-	}
-
-	data = dataArray[0];
-
-	str += '<div class="top">' + data.Schulname + '</div>';
-	str += '<div class="middle">' + dataArray.length + '</div>';
-	str += '<div class="bottom">' + (dataArray.length === 1 ? 'Baumaßnahme' : 'Baumaßnahmen') + '</div>';
-
-	layerPopup = L.popup(options)
-		.setLatLng(coordinates)
-		.setContent(str)
-		.openOn(ddj.getMap());
-}
-
-// -----------------------------------------------------------------------------
-
-function updateMapVoidItem() {
-	'use strict';
-
-	if (layerPopup && ddj.getMap()) {
-		ddj.getMap().closePopup(layerPopup);
-		layerPopup = null;
-    }
 }
 
 // -----------------------------------------------------------------------------
@@ -85,27 +34,6 @@ function selectSuggestion(selection) {
 	});
 }
 
-// -----------------------------------------------------------------------------
-/*
-function initSocialMedia() {
-	'use strict';
-
-	setTimeout(function () {
-		$.ajax('http://www.tursics.de/v5shariff.php?url=http://schulsanierung.tursics.de/')
-			.done(function (json) {
-				$('.social .facebook span').html(json.facebook);
-				if (json.facebook > 0) {
-					$('.social .facebook span').addClass('active');
-				}
-
-				$('.social .twitter span').html(json.twitter);
-				if (json.twitter > 0) {
-					$('.social .twitter span').addClass('active');
-				}
-			});
-	}, 1000);
-}
-*/
 // -----------------------------------------------------------------------------
 
 var ControlInfo = L.Control.extend({
@@ -162,11 +90,10 @@ $(document).on("pageshow", "#pageMap", function () {
 
 	$.getJSON(dataUrlSanierungen, function (dataSanierungen) {
 		var data = dataSanierungen;
-		data = enrichMissingData(data);
 
 		ddj.init(data);
 		ddj.setUniqueIdentifier('BSN');
-
+	}).done(function() {
 		ddj.marker.init({
 			onAdd: function (marker) {
 				marker.color = 'darkred';
@@ -175,14 +102,6 @@ $(document).on("pageshow", "#pageMap", function () {
 
 				return true;
 			},
-/*			onMouseOver: function (latlng, data) {
-				updateMapHoverItem(latlng, data, {
-					options: {}
-				}, 6);
-			},
-			onMouseOut: function (latlng, data) {
-				updateMapVoidItem(data);
-			},*/
 			onClick: function (latlng, data) {
 				updateMapSelectItem(data);
 			}
@@ -247,30 +166,34 @@ $(document).on("pageshow", "#pageMap", function () {
 			}
 		});
 
-//		initSocialMedia();
-	});
+		$('.visibleWithoutData').hide();
+		$('.visibleWithData').show();
+	}).fail(function(jqXHR, textStatus) {
+		$('.visibleWithoutErrors').hide();
+		$('.visibleWithErrors').show();
+	}).always(function() {
+		ddj.getMap().addControl(new ControlInfo());
 
-	ddj.getMap().addControl(new ControlInfo());
+		$('#autocomplete').val('');
 
-	$('#autocomplete').val('');
+		$("#popupShare").on('popupafteropen', function () {
+			$('#shareLink input').focus().select();
+		});
+		$('#tabShareLink').on('click', function () {
+			$('#popupShare').popup('reposition', 'positionTo: window');
+			$('#shareLink input').focus().select();
+		});
+		$('#tabEmbedMap').on('click', function () {
+			updateEmbedURI();
+			$('#popupShare').popup('reposition', 'positionTo: window');
+			$('#embedMap input').focus().select();
+		});
 
-	$("#popupShare").on('popupafteropen', function () {
-		$('#shareLink input').focus().select();
-	});
-	$('#tabShareLink').on('click', function () {
-		$('#popupShare').popup('reposition', 'positionTo: window');
-		$('#shareLink input').focus().select();
-	});
-	$('#tabEmbedMap').on('click', function () {
-		updateEmbedURI();
-		$('#popupShare').popup('reposition', 'positionTo: window');
-		$('#embedMap input').focus().select();
-	});
-
-	$('#selectEmbedSize').val('400x300').selectmenu('refresh');
-	$('#selectEmbedSize').on('change', function () {
-		updateEmbedURI();
-		$('#popupShare').popup('reposition', 'positionTo: window');
+		$('#selectEmbedSize').val('400x300').selectmenu('refresh');
+		$('#selectEmbedSize').on('change', function () {
+			updateEmbedURI();
+			$('#popupShare').popup('reposition', 'positionTo: window');
+		});
 	});
 });
 
