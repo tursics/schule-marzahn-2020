@@ -254,15 +254,15 @@
 }
 #searchBox .sample a, #searchBox .filter a {
 	font-weight: 400;
-	color: #38aadd;
+	color: #a23336;
 	text-decoration: none;
 	border-bottom: 2px solid transparent;
 }
 #searchBox .ui-slider-handle, #searchBox .ui-btn, #searchBox .ui-slider-input {
-	border-color: #38aadd !important;
+	border-color: #a23336 !important;
 }
 #searchBox .sample a:hover, #searchBox .filter a:hover {
-	border-bottom-color: #38aadd;
+	border-bottom-color: #a23336;
 }
 #searchBox .searchInput, .bigSign .searchInput {
 	height: 2.2em;
@@ -431,7 +431,7 @@
 	height: 0;
 	border-style: solid;
 	border-width: 0 10px 17px 10px;
-	border-color: transparent transparent #38aadd transparent;
+	border-color: transparent transparent #a23336 transparent;
 	margin-left: 0%;
 	-webkit-transition: margin-left 200ms linear;
 	-moz-transition: margin-left 200ms linear;
@@ -464,17 +464,17 @@
 	margin: 0 0 .8em 0;
 }
 #popupAuthor hr, #popupInfo hr {
-	border: 1px solid #38aadd;
+	border: 1px solid #a23336;
 	margin: 0 0 .8em 0;
 }
 #popupAuthor a, #popupInfo a {
 	font-weight: 400;
-	color: #38aadd;
+	color: #a23336;
 	text-decoration: none;
 	border-bottom: 2px solid transparent;
 }
 #popupAuthor a:hover, #popupInfo a:hover {
-	border-bottom-color: #38aadd;
+	border-bottom-color: #a23336;
 }
 #popupShare-popup {
 	-webkit-transition: top 200ms linear, left 200ms linear;
@@ -491,9 +491,9 @@
 }
 #popupShare li.ui-tabs-active .ui-btn.ui-btn-active {
 	background: #f1f8fc;
-	color: #38aadd;
+	color: #a23336;
 	padding-bottom: .9em;
-	border-bottom: 2px solid #38aadd;
+	border-bottom: 2px solid #a23336;
 }
 #popupShare iframe {
 	border: 1px solid #555 !important;
@@ -659,15 +659,15 @@
 	text-shadow: none !important;
 }
 .ui-btn.ui-btn-a {
-	background: #fff !important;
-	border: 2px solid #38aadd !important;
+	background: #a23336 !important;
+	border: 2px solid #a23336 !important;
 	border-radius: 2em;
-	color: #38aadd !important;
+	color: #fff !important;
 	padding: .4em .6em;
 }
 .ui-btn.ui-btn-a:hover {
-	background: #38aadd !important;
-	color: #fff !important;
+	background: #fff !important;
+	color: #a23336 !important;
 }
 
 /* color theme for printer labels and autocomplete list */
