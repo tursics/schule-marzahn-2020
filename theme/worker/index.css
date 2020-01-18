@@ -736,3 +736,106 @@
 }
 
 /* */
+
+i.pin {
+	margin-top: 17px !important;
+	margin-left: -6px;
+}
+i.pin::before {
+	background-repeat: no-repeat;
+	background-size: 50px;
+	content: '';
+	padding: 35px 0 0 50px;
+}
+i.pin.pin-architecture::before {
+	background-image: url(assets/1935619-construction-worker/svg/001-architecture.svg);
+}
+i.pin.pin-architect::before {
+	background-image: url(assets/1935619-construction-worker/svg/014-architect.svg);
+}
+i.pin.pin-carpenter::before {
+	background-image: url(assets/1935619-construction-worker/svg/002-carpenter.svg);
+}
+i.pin.pin-lumberjack-1::before {
+	background-image: url(assets/1935619-construction-worker/svg/003-lumberjack.svg);
+}
+i.pin.pin-lumberjack-2::before {
+	background-image: url(assets/1935619-construction-worker/svg/006-lumberjack.svg);
+}
+i.pin.pin-engineer-1::before {
+	background-image: url(assets/1935619-construction-worker/svg/004-engineer.svg);
+}
+i.pin.pin-engineer-2::before {
+	background-image: url(assets/1935619-construction-worker/svg/005-engineer.svg);
+}
+i.pin.pin-engineer-3::before {
+	background-image: url(assets/1935619-construction-worker/svg/010-engineer.svg);
+}
+i.pin.pin-engineer-4::before {
+	background-image: url(assets/1935619-construction-worker/svg/011-engineer.svg);
+}
+i.pin.pin-concrete-mixer::before {
+	background-image: url(assets/1935619-construction-worker/svg/007-concrete-mixer.svg);
+}
+i.pin.pin-crane::before {
+	background-image: url(assets/1935619-construction-worker/svg/008-crane.svg);
+}
+i.pin.pin-builder-1::before {
+	background-image: url(assets/1935619-construction-worker/svg/009-builder.svg);
+}
+i.pin.pin-builder-2::before {
+	background-image: url(assets/1935619-construction-worker/svg/013-builder.svg);
+}
+i.pin.pin-builder-3::before {
+	background-image: url(assets/1935619-construction-worker/svg/016-builder.svg);
+}
+i.pin.pin-builder-4::before {
+	background-image: url(assets/1935619-construction-worker/svg/017-builder.svg);
+}
+i.pin.pin-builder-5::before {
+	background-image: url(assets/1935619-construction-worker/svg/030-builder.svg);
+}
+i.pin.pin-drill::before {
+	background-image: url(assets/1935619-construction-worker/svg/012-drill.svg);
+}
+i.pin.pin-mechanic::before {
+	background-image: url(assets/1935619-construction-worker/svg/015-mechanic.svg);
+}
+i.pin.pin-operator::before {
+	background-image: url(assets/1935619-construction-worker/svg/018-operator.svg);
+}
+i.pin.pin-package::before {
+	background-image: url(assets/1935619-construction-worker/svg/019-package.svg);
+}
+i.pin.pin-painting::before {
+	background-image: url(assets/1935619-construction-worker/svg/020-painting.svg);
+}
+i.pin.pin-protection::before {
+	background-image: url(assets/1935619-construction-worker/svg/021-protection.svg);
+}
+i.pin.pin-repairman::before {
+	background-image: url(assets/1935619-construction-worker/svg/022-repairman.svg);
+}
+i.pin.pin-sawing::before {
+	background-image: url(assets/1935619-construction-worker/svg/023-sawing.svg);
+}
+i.pin.pin-screwdriver::before {
+	background-image: url(assets/1935619-construction-worker/svg/024-screwdriver.svg);
+}
+i.pin.pin-strategy::before {
+	background-image: url(assets/1935619-construction-worker/svg/025-strategy.svg);
+}
+i.pin.pin-wall::before {
+	background-image: url(assets/1935619-construction-worker/svg/026-wall.svg);
+}
+i.pin.pin-teamwork::before {
+	background-image: url(assets/1935619-construction-worker/svg/027-teamwork.svg);
+}
+i.pin.pin-traffic-cone::before {
+	background-image: url(assets/1935619-construction-worker/svg/028-traffic-cone.svg);
+}
+i.pin.pin-welder::before {
+	background-image: url(assets/1935619-construction-worker/svg/029-welder.svg);
+}
+
+/* */

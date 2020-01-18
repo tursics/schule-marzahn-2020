@@ -98,10 +98,10 @@ $(document).on("pageshow", "#pageMap", function () {
 		ddj.setUniqueIdentifier('BSN');
 	}).done(function() {
 		ddj.marker.init({
-			onAdd: function (marker) {
-				marker.color = 'darkred';
-//				marker.iconPrefix = 'fa';
-//				marker.iconFace = 'fa-building-o';
+			onAdd: function (marker, value) {
+				marker.color = 'white';
+				marker.iconPrefix = 'pin';
+				marker.iconFace = value.pin;
 
 				return true;
 			},
